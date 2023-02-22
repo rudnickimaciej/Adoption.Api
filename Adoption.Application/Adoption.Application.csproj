@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OneOf" Version="3.0.223" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Adoption.Domain\Adoption.Domain.csproj" />
     <ProjectReference Include="..\Adoption.Shared\Adoption.Shared.csproj" />
   </ItemGroup>

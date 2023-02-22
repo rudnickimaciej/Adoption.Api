@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Adoption.Application.Exceptions
 {
-    public class OffertWithPetIdAlreadyExistsException:CustomException
+    public class OffertWithPetIdAlreadyExistsException: CustomException
     {
         public OffertWithPetIdAlreadyExistsException(Guid PetId) : base("Offert for this Pet already exists.")
         {

@@ -1,6 +1,8 @@
+using Adoption.Application.Exceptions;
 using Adoption.Application.Services.Authentication;
 using Adoption.Auth.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using OneOf;
 
 namespace Adoption.Api.Controllers
 {
@@ -21,13 +23,17 @@ namespace Adoption.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterRequest registerRequest)
         {
-            AuthenticationResult authResult = await _authenticationService.Register(
+
+            OneOf<AuthenticationResult, UserAlreadyExistsException> registerResult = await _authenticationService.Register(
                 registerRequest.FirstName,
                 registerRequest.LastName,
                 registerRequest.Email,
                 registerRequest.Password);
 
-            return Ok(authResult);
+            return registerResult.Match(
+                authResult => Ok(authResult),
+                _ => Problem(statusCode: StatusCodes.Status409Conflict, title: _.InnerException.Message));
+
         }
 
         [HttpPost]

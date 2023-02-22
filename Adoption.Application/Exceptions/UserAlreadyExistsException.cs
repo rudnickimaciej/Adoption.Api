@@ -1,4 +1,5 @@
 ﻿using Adoption.Shared.Abstractions.Exceptions;
+using System.Net;
 
 namespace Adoption.Application.Exceptions
 {

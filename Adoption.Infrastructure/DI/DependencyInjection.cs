@@ -2,6 +2,7 @@
 using Adoption.Domain.Repositiories;
 using Adoption.Infrastructure.Authentication;
 using Adoption.Infrastructure.Repositories;
+using Adoption.Shared.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,7 +16,7 @@ namespace Adoption.Infrastructure.DI
             services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.Name));
             services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
             services.AddScoped<IUserRepository, UserRepository>();
-
+            services.AddQueries();
             return services;
         }
     }

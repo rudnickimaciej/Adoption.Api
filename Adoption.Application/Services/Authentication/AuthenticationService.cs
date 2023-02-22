@@ -2,6 +2,7 @@
 using Adoption.Application.Exceptions;
 using Adoption.Domain.Entities;
 using Adoption.Domain.Repositiories;
+using OneOf;
 
 namespace Adoption.Application.Services.Authentication
 {
@@ -21,7 +22,7 @@ namespace Adoption.Application.Services.Authentication
             var user = await _userRepository.GetByEmailAsync(email);
             if (user == null)
             {
-                //throw new UserWithTheEmailNotExistsException()
+                return new UserWithTheEmailNotExistsException();
             }
             if (user.Password != password)
             {
@@ -37,7 +38,7 @@ namespace Adoption.Application.Services.Authentication
                 token);
         }
 
-        public async Task<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
+        public async Task<OneOf<AuthenticationResult, UserAlreadyExistsException>> Register(string firstName, string lastName, string email, string password)
         {
 
             //Check if usr already exists

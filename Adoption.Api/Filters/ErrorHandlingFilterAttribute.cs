@@ -8,11 +8,8 @@ namespace Adoption.Api.Filters
     {
         public override void OnException(ExceptionContext context)
         {
-            var exception = context.Exception;
-
             var problemDetails = new ProblemDetails
             {
-                //Title = "An error occured while processing your request",
                 Title = context.Exception.Message,
                 Status = (int)HttpStatusCode.InternalServerError
             };

@@ -1,4 +1,5 @@
-﻿using Adoption.Shared.Time;
+﻿using Adoption.Shared.Extensions;
+using Adoption.Shared.Time;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Adoption.Shared.DI

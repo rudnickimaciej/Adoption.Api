@@ -6,7 +6,7 @@ using Adoption.Shared.DI;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers(
-    options=>options.Filters.Add<ErrorHandlingFilterAttribute>());
+    options => options.Filters.Add<ErrorHandlingFilterAttribute>());
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
