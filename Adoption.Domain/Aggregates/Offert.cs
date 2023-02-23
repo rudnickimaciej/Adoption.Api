@@ -15,7 +15,7 @@ namespace Adoption.Domain.Aggregates
     public class Offert : AggregateRoot<OffertId>
     {
         public PetId PetId { get; private set; }
-        public OffertStatus OffertStatus { get; private set; }
+        public OffertStatus OffertStatus { get; private set; } //jak to przemapować z EF? 
         public OffertDescription Description { get; private set; }
 
         public IEnumerable<Application?> Applications { get; private set; }

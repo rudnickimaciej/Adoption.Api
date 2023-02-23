@@ -1,7 +1,7 @@
 ﻿using Adoption.Domain.Entities;
 using Adoption.Domain.ValueObjects;
 
-namespace Adoption.Domain
+namespace Adoption.Domain.Entities
 {
     //Aggregat
 

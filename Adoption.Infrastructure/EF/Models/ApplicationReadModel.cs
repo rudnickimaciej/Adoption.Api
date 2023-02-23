@@ -1,6 +1,6 @@
 ﻿namespace Adoption.Infrastructure.DTO
 {
-    public class ApplicationReadModel
+    internal class ApplicationReadModel
     {
         public Guid Id { get; set; }
         public string User { get; set; }
