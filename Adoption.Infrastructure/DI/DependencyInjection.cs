@@ -1,6 +1,7 @@
 ﻿using Adoption.Application.Common.Interfaces.Authentication;
 using Adoption.Domain.Repositiories;
 using Adoption.Infrastructure.Authentication;
+using Adoption.Infrastructure.EF.DI;
 using Adoption.Infrastructure.Repositories;
 using Adoption.Shared.Extensions;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +18,7 @@ namespace Adoption.Infrastructure.DI
             services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddQueries();
+            services.AddSqlServer(configuration);
             return services;
         }
     }

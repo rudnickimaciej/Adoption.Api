@@ -1,4 +1,5 @@
-﻿using Adoption.Shared.Abstractions.Exceptions;
+﻿using Adoption.Domain.Entities;
+using Adoption.Shared.Abstractions.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

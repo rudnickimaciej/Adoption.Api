@@ -8,6 +8,7 @@ namespace Adoption.Application.DTO
 {
     public class OffertDto
     {
+        public Guid Id { get; set; }
         public Guid PetId { get; set; }
         public string Description { get; set; }
         public IEnumerable<ApplicationDto> Applications{ get; set; }

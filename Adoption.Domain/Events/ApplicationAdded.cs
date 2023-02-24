@@ -1,4 +1,5 @@
-﻿using Adoption.Shared.Abstractions.Domain;
+﻿using Adoption.Domain.Entities;
+using Adoption.Shared.Abstractions.Domain;
 
 namespace Adoption.Domain.DomainEvents
 {

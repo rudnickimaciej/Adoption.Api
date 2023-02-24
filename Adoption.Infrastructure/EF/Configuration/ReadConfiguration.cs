@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Adoption.Infrastructure.EF.Configuration
 {
-    internal sealed class ReadConfiguration : IEntityTypeConfiguration<OffertReadModel>, IEntityTypeConfiguration<ApplicationReadModel>
+    internal sealed class ReadConfiguration : IEntityTypeConfiguration<OffertModel>, IEntityTypeConfiguration<ApplicationReadModel>
     {
-        public void Configure(EntityTypeBuilder<OffertReadModel> builder)
+        public void Configure(EntityTypeBuilder<OffertModel> builder)
         {
             builder
                 .ToTable("Offerts")

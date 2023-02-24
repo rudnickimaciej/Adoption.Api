@@ -6,7 +6,7 @@ namespace Adoption.Infrastructure.EF.Contexts
 {
     internal class ReadDbContext : DbContext
     {
-        public DbSet<OffertReadModel> Offerts { get; set; }
+        public DbSet<OffertModel> Offerts { get; set; }
         public ReadDbContext(DbContextOptions<ReadDbContext> options) : base(options)
         {
 
@@ -16,7 +16,7 @@ namespace Adoption.Infrastructure.EF.Contexts
             modelBuilder.HasDefaultSchema("adoption");
 
             var configuration = new ReadConfiguration();
-            modelBuilder.ApplyConfiguration<OffertReadModel>(configuration);
+            modelBuilder.ApplyConfiguration<OffertModel>(configuration);
             modelBuilder.ApplyConfiguration<ApplicationReadModel>(configuration);
         }
 

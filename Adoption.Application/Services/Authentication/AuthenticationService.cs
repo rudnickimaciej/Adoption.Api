@@ -22,7 +22,7 @@ namespace Adoption.Application.Services.Authentication
             var user = await _userRepository.GetByEmailAsync(email);
             if (user == null)
             {
-                return new UserWithTheEmailNotExistsException();
+                throw new UserWithTheEmailNotExistsException();
             }
             if (user.Password != password)
             {

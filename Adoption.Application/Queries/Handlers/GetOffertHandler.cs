@@ -9,7 +9,7 @@ namespace Adoption.Application.Queries
 
         public Task<OffertDto> HandleAsync(GetOffert query)
         {
-             
+             throw new NotImplementedException(); 
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Adoption.Domain.Aggregates;
+using Adoption.Domain.Entities;
 using Adoption.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;

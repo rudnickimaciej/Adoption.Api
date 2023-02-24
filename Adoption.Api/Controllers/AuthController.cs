@@ -1,6 +1,7 @@
 using Adoption.Application.Exceptions;
 using Adoption.Application.Services.Authentication;
 using Adoption.Auth.Authentication;
+using Adoption.Infrastructure.EF.Options;
 using Microsoft.AspNetCore.Mvc;
 using OneOf;
 
@@ -13,17 +14,21 @@ namespace Adoption.Api.Controllers
         
         private readonly ILogger<AuthController> _logger;
         private readonly IAuthenticationService _authenticationService;
+        private readonly SqlServerOptions _sqlServerOptions;
 
-        public AuthController(ILogger<AuthController> logger, IAuthenticationService authenticationService)
+        public AuthController(
+            ILogger<AuthController> logger, 
+            IAuthenticationService authenticationService, 
+            SqlServerOptions sqlServerOptions)
         {
             _logger = logger;
             _authenticationService = authenticationService;
+            _sqlServerOptions = sqlServerOptions;
         }
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterRequest registerRequest)
         {
-
             OneOf<AuthenticationResult, UserAlreadyExistsException> registerResult = await _authenticationService.Register(
                 registerRequest.FirstName,
                 registerRequest.LastName,
