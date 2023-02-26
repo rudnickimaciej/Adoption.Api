@@ -1,5 +1,4 @@
 ﻿using Adoption.Domain.Entities;
-using Adoption.Domain.ValueObjects;
 
 namespace Adoption.Domain.Entities
 {
@@ -28,9 +27,20 @@ namespace Adoption.Domain.Entities
     {
         public Guid Id { get; private set; }
         public Guid OffertId { get; private set; }
-        public Contact Contact { get; private set; } //ValueObject
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public ApplicationStatus Status{ get; private set; }
+        //public Contact Contact { get; private set; } //ValueObject
+        public string ApplicantName { get; private set; }
+        public string ApplicantLastName { get; private set; }
+        //public ApplicationStatus Status{ get; private set; }
+        public ApplicationStatus Status { get; private set; }
+    }
+
+    public enum ApplicationStatus
+    {
+        NotOpened,
+        InProgress,
+        InFinalization,
+        RejectedByWorker,
+        WithdrawedByApplicant,
+        ClosedDueToAnotherApplicationSuccess
     }
 }

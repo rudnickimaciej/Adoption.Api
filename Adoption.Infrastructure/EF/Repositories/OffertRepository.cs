@@ -1,6 +1,6 @@
 ﻿using Adoption.Domain.Aggregates;
 using Adoption.Domain.Repositiories;
-using Adoption.Infrastructure.EF.Contexts;
+using Adoption.Infrastructure.EF.Contexts.Write;
 using Microsoft.EntityFrameworkCore;
 
 namespace Adoption.Infrastructure.EF.Repositories

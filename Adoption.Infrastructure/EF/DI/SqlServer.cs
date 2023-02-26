@@ -1,5 +1,6 @@
 ﻿using Adoption.Domain.Repositiories;
-using Adoption.Infrastructure.EF.Contexts;
+using Adoption.Infrastructure.EF.Contexts.Read;
+using Adoption.Infrastructure.EF.Contexts.Write;
 using Adoption.Infrastructure.EF.Options;
 using Adoption.Infrastructure.EF.Repositories;
 using Adoption.Shared.Options;

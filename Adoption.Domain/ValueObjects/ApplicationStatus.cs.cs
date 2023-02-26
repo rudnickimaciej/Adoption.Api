@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Adoption.Domain.ValueObjects
+﻿namespace Adoption.Domain.ValueObjects
 {
     public sealed record ApplicationStatus(string Value)
     {

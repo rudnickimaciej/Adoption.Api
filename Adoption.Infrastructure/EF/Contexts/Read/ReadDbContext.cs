@@ -2,7 +2,7 @@
 using Adoption.Infrastructure.EF.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace Adoption.Infrastructure.EF.Contexts
+namespace Adoption.Infrastructure.EF.Contexts.Read
 {
     internal class ReadDbContext : DbContext
     {
@@ -15,9 +15,9 @@ namespace Adoption.Infrastructure.EF.Contexts
         {
             modelBuilder.HasDefaultSchema("adoption");
 
-            var configuration = new ReadConfiguration();
-            modelBuilder.ApplyConfiguration<OffertModel>(configuration);
-            modelBuilder.ApplyConfiguration<ApplicationReadModel>(configuration);
+            modelBuilder.ApplyConfigurationsFromAssembly(
+                typeof(ReadDbContext).Assembly,
+                x => x.Namespace != "Adoption.Infrastructure.EF.Contexts.Write");
         }
 
     }

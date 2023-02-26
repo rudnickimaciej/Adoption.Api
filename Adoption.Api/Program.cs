@@ -1,7 +1,6 @@
 using Adoption.Api.Filters;
 using Adoption.Application.DI;
 using Adoption.Infrastructure.DI;
-using Adoption.Infrastructure.EF.Options;
 using Adoption.Shared.DI;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,8 +1,7 @@
 ﻿using Adoption.Domain.Aggregates;
-using Adoption.Infrastructure.EF.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace Adoption.Infrastructure.EF.Contexts
+namespace Adoption.Infrastructure.EF.Contexts.Write
 {
     internal class WriteDbContext : DbContext
     {
@@ -14,11 +13,10 @@ namespace Adoption.Infrastructure.EF.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("adoption");
-            var configuration = new WriteConfiguration();
-            modelBuilder.ApplyConfiguration<Offert>(configuration);
-            modelBuilder.ApplyConfiguration<Adoption.Domain.Entities.Application>(configuration);
+            modelBuilder.ApplyConfigurationsFromAssembly(
+                typeof(WriteDbContext).Assembly,
+                x => x.Namespace != "Adoption.Infrastructure.EF.Contexts.Read");
 
-            base.OnModelCreating(modelBuilder);
         }
 
     }

@@ -1,12 +1,11 @@
 ﻿using Adoption.Domain.Aggregates;
 using Adoption.Domain.ValueObjects;
-using Adoption.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Adoption.Infrastructure.EF.Configuration
+namespace Adoption.Infrastructure.EF.Configuration.WriteConfigurations
 {
-    internal sealed class WriteConfiguration : IEntityTypeConfiguration<Offert>, IEntityTypeConfiguration<Adoption.Domain.Entities.Application>
+    internal sealed class OffertConfiguration : IEntityTypeConfiguration<Offert>
     {
         public void Configure(EntityTypeBuilder<Offert> builder)
         {
@@ -15,32 +14,36 @@ namespace Adoption.Infrastructure.EF.Configuration
 
             builder
               .Property(o => o.Id)
+              .HasColumnName("OffertId")
               .HasConversion(offertId => offertId.Value, offertId => new OffertId(offertId));
 
             builder
+                .Property(o => o.OffertStatus)
+                .IsRequired()
+                .HasConversion<int>()
+                .HasComment("Komentarz do Offert Status");
+
+
+            builder
                 .Property(offert => offert.Description)
-                .HasConversion(description => description.Value, description => new OffertDescription(description));
+                .HasConversion(description => description.Value, description => new OffertDescription(description))
+                .HasMaxLength(1000);
+                
 
             builder
                 .Property(offert => offert.PetId)
                 .HasConversion(petId => petId.Value, petId => new PetId(petId));
 
             builder
-                .HasMany(typeof(Adoption.Domain.Entities.Application), "_applications");
+                .HasMany(typeof(Domain.Entities.Application), "_applications");
 
             builder
                 .ToTable("Offerts");
 
             builder
                 .Property<DateTime>("CreatedOn"); //Shadow Property
-            
-                        
-        }
 
-        public void Configure(EntityTypeBuilder<Adoption.Domain.Entities.Application> builder)
-        {
-            builder
-                .Property<DateTime>("Id"); //Shadow Property    
+
         }
     }
 }

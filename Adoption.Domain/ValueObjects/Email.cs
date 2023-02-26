@@ -20,8 +20,12 @@ namespace Adoption.Domain.ValueObjects
             Value = value;
         }
 
-    public static implicit operator string(Email email) => email.Value;
-    public static implicit operator Email(string email) => new Email(email);
+        public Email()
+        {
+        }
+
+        public static implicit operator string(Email email) => email.Value;
+        public static implicit operator Email(string email) => new Email(email);
     }
 
 }

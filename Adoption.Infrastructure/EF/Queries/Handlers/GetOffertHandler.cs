@@ -1,7 +1,7 @@
 ﻿using Adoption.Application.DTO;
 using Adoption.Application.Queries;
 using Adoption.Infrastructure.DTO;
-using Adoption.Infrastructure.EF.Contexts;
+using Adoption.Infrastructure.EF.Contexts.Read;
 using Adoption.Infrastructure.EF.Queries.Handlers;
 using Adoption.Shared.Abstractions.Queries;
 using Microsoft.EntityFrameworkCore;
