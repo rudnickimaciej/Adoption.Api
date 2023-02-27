@@ -10,7 +10,7 @@ namespace Adoption.Infrastructure.EF.Queries.Handlers
 {
     internal static class MapOffertToDto
     {
-        public static OffertDto AsDto(this OffertModel offert)
+        public static OffertDto AsDto(this OffertReadModel offert)
             => new()
             {
                 Id = offert.Id,

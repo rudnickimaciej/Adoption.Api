@@ -13,10 +13,11 @@ namespace Adoption.Domain.Aggregates
         public OffertStatus OffertStatus { get; private set; } //jak to przemapować z EF? 
         public OffertDescription Description { get; private set; }
         public DateTime CreatedOn { get; private set; }
+        public string NowePoleNowaNazwa { get;private  set; }
 
-        //public IEnumerable<Application?> Applications { get; private set; }
+        public IEnumerable<Application> Applications { get; private set; }
         
-        public Application? WonApplication{ get; private set; }
+        //public Application? WonApplication{ get; private set; }
 
         private readonly ICollection<Application> _applications = new List<Application>();
 
@@ -71,7 +72,7 @@ namespace Adoption.Domain.Aggregates
             //    //throw new ApplicationIsNotConnectedToOffertException
             //}
             OffertStatus = OffertStatus.EndedWithAdoption;
-            WonApplication = application;
+            //WonApplication = application;
             AddEvent(new OffertClosedWithAdoption(this));
         }
 

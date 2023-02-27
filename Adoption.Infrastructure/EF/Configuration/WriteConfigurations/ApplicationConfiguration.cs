@@ -10,15 +10,19 @@ namespace Adoption.Infrastructure.EF.Configuration.WriteConfigurations
         public void Configure(EntityTypeBuilder<Domain.Entities.Application> builder)
         {
             builder
-                .Property<DateTime>("CreatedOn"); //Shadow Property    
+                .ToTable("Applications")
+                .HasKey(a => a.Id);
 
             builder
-                .HasKey(a => a.Id);
+                .Property<DateTime>("CreatedOn"); //Shadow Property    
 
             builder
                 .Property(a => a.Status)
                 .HasConversion<int>()
                 .IsRequired();
+
+            builder
+                .HasOne(a => a.Offert);
         }
     }
 }

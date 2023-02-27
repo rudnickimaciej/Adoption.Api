@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Adoption.Infrastructure.EF.Configuration.ReadConfigurations
 {
-    internal sealed class OffertConfiguration : IEntityTypeConfiguration<OffertModel>
+    internal sealed class OffertConfiguration : IEntityTypeConfiguration<OffertReadModel>
     {
-        public void Configure(EntityTypeBuilder<OffertModel> builder)
+        public void Configure(EntityTypeBuilder<OffertReadModel> builder)
         {
             builder
-                .ToTable("Offerts2")
+                .ToTable("Offerts")
                 .HasKey(o => o.Id);
 
             builder

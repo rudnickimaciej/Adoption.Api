@@ -8,7 +8,9 @@ namespace Adoption.Infrastructure.EF.Configuration.ReadConfigurations
     {
         public void Configure(EntityTypeBuilder<ApplicationReadModel> builder)
         {
-            builder.ToTable("Applications");
+            builder
+                .ToTable("Applications")
+                .HasKey(a => a.Id);
         }
     }
 }

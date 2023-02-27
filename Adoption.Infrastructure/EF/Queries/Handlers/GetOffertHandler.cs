@@ -10,7 +10,7 @@ namespace Adoption.Infrastructure.EF.Queries
 {
     internal sealed class GetOffertHandler : IQueryHandler<GetOffert,OffertDto>
     {
-        private readonly DbSet<OffertModel> _offerts;
+        private readonly DbSet<OffertReadModel> _offerts;
 
         public GetOffertHandler(ReadDbContext ctx)
             => _offerts = ctx.Offerts;

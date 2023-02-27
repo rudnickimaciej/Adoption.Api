@@ -10,13 +10,14 @@ namespace Adoption.Infrastructure.EF.Configuration.WriteConfigurations
         public void Configure(EntityTypeBuilder<Offert> builder)
         {
             builder
+                .ToTable("Offerts")
                 .HasKey(o => o.Id);
 
             builder
               .Property(o => o.Id)
-              .HasColumnName("OffertId")
+              .HasColumnName("Id")
               .HasConversion(offertId => offertId.Value, offertId => new OffertId(offertId));
-
+            
             builder
                 .Property(o => o.OffertStatus)
                 .IsRequired()
@@ -38,12 +39,10 @@ namespace Adoption.Infrastructure.EF.Configuration.WriteConfigurations
                 .HasMany(typeof(Domain.Entities.Application), "_applications");
 
             builder
-                .ToTable("Offerts");
-
-            builder
-                .Property<DateTime>("CreatedOn"); //Shadow Property
-
-
+                .Property(o => o.NowePoleNowaNazwa)
+                .IsRequired()
+                .HasDefaultValue("wartość domyślna")
+                .HasMaxLength(69);
         }
     }
 }

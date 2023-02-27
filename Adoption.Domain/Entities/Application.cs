@@ -1,4 +1,5 @@
-﻿using Adoption.Domain.Entities;
+﻿using Adoption.Domain.Aggregates;
+using Adoption.Domain.Entities;
 
 namespace Adoption.Domain.Entities
 {
@@ -26,7 +27,7 @@ namespace Adoption.Domain.Entities
     public class Application
     {
         public Guid Id { get; private set; }
-        public Guid OffertId { get; private set; }
+        public Offert Offert { get; private set; }
         //public Contact Contact { get; private set; } //ValueObject
         public string ApplicantName { get; private set; }
         public string ApplicantLastName { get; private set; }
