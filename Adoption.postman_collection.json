@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "449fe314-54ed-4c8b-9a6e-9edcc7da6f88",
+		"name": "Adoption",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8437584"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "api/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://{{url}}:{{port}}/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Offerts",
+			"item": [
+				{
+					"name": "api/offerts/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://{{url}}:{{port}}/api/offerts/createoffert",
+							"protocol": "https",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"offerts",
+								"createoffert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/offerts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{url}}:{{port}}/api/offerts?id=837B8BB5-89BF-4F92-BF40-6AA4AE5ADDBC",
+							"protocol": "https",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"offerts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "837B8BB5-89BF-4F92-BF40-6AA4AE5ADDBC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Applications",
+			"item": []
+		},
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "api/pets/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://{{url}}:{{port}}/api/offerts/createoffert",
+							"protocol": "https",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"offerts",
+								"createoffert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "7065",
+			"type": "string"
+		}
+	]
+}
