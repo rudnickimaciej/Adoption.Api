@@ -10,4 +10,23 @@
     <ProjectReference Include="..\Adoption.Shared.Abstractions\Adoption.Shared.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Applications\Factories\" />
+    <Folder Include="Applications\Policies\" />
+    <Folder Include="Applications\Repositiories\" />
+    <Folder Include="Offerts\Services\" />
+    <Folder Include="Pets\Aggregates\" />
+    <Folder Include="Pets\Events\" />
+    <Folder Include="Pets\Exceptions\" />
+    <Folder Include="Pets\Factories\" />
+    <Folder Include="Pets\Policies\" />
+    <Folder Include="Pets\Services\" />
+    <Folder Include="Users\Aggregates\" />
+    <Folder Include="Users\Events\" />
+    <Folder Include="Users\Exceptions\" />
+    <Folder Include="Users\Factories\" />
+    <Folder Include="Users\Policies\" />
+    <Folder Include="Users\Services\" />
+  </ItemGroup>
+
 </Project>

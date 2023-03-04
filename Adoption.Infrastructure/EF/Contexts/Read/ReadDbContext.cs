@@ -8,6 +8,9 @@ namespace Adoption.Infrastructure.EF.Contexts.Read
     {
         public DbSet<OffertReadModel> Offerts { get; set; }
         public DbSet<ApplicationReadModel> Applications { get; set; }
+        public DbSet<PetReadModel> Pets { get; set; }
+
+
 
         public ReadDbContext(DbContextOptions<ReadDbContext> options) : base(options)
         {

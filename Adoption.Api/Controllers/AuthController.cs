@@ -1,5 +1,5 @@
-using Adoption.Application.Exceptions;
-using Adoption.Application.Services.Authentication;
+using Adoption.Application.Common.Services.Authentication;
+using Adoption.Application.Offerts.OffertsExceptions;
 using Adoption.Auth.Authentication;
 using Adoption.Infrastructure.EF.Options;
 using Microsoft.AspNetCore.Mvc;

@@ -1,4 +1,5 @@
 ﻿using Adoption.Domain.Aggregates;
+using Adoption.Domain.Offert.Aggregatates;
 using Adoption.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -36,7 +37,7 @@ namespace Adoption.Infrastructure.EF.Configuration.WriteConfigurations
                 .HasConversion(petId => petId.Value, petId => new PetId(petId));
 
             builder
-                .HasMany(typeof(Domain.Entities.Application), "_applications");
+                .HasMany(typeof(Domain.Application.Entities.Application), "_applications");
 
             builder
                 .Property(o => o.NowePoleNowaNazwa)

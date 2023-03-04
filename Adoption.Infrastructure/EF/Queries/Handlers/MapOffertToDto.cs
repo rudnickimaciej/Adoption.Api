@@ -1,4 +1,5 @@
 ﻿using Adoption.Application.DTO;
+using Adoption.Application.Offerts.DTO;
 using Adoption.Infrastructure.DTO;
 using System;
 using System.Collections.Generic;

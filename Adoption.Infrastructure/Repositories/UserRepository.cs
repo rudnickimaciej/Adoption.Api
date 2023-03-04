@@ -1,5 +1,5 @@
-﻿using Adoption.Domain.Entities;
-using Adoption.Domain.Repositiories;
+﻿using Adoption.Domain.Users.Entities;
+using Adoption.Domain.Users.Repositiories;
 
 namespace Adoption.Infrastructure.Repositories
 {

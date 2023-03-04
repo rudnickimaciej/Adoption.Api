@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Adoption.Infrastructure.EF.Configuration.WriteConfigurations
 {
-    internal sealed class ApplicationConfiguration :  IEntityTypeConfiguration<Domain.Entities.Application>
+    internal sealed class ApplicationConfiguration :  IEntityTypeConfiguration<Domain.Application.Entities.Application>
     {     
-        public void Configure(EntityTypeBuilder<Domain.Entities.Application> builder)
+        public void Configure(EntityTypeBuilder<Domain.Application.Entities.Application> builder)
         {
             builder
                 .ToTable("Applications")

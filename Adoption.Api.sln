@@ -15,7 +15,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adoption.Shared.Abstraction
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adoption.Shared", "Adoption.Shared\Adoption.Shared.csproj", "{3E3D2F24-E1FC-4A8C-B198-7D82A755C086}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adoption.Auth", "Adoption.Auth\Adoption.Auth.csproj", "{4CE787F4-8268-47D0-9FA5-339D78248A23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adoption.Auth", "Adoption.Auth\Adoption.Auth.csproj", "{4CE787F4-8268-47D0-9FA5-339D78248A23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0F457B0-D288-44E2-A796-C30D51F7653D}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-﻿using Adoption.Domain.Repositiories;
+﻿using Adoption.Domain.Offert.Repositiories;
 using Adoption.Infrastructure.EF.Contexts.Read;
 using Adoption.Infrastructure.EF.Contexts.Write;
 using Adoption.Infrastructure.EF.Options;

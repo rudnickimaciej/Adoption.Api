@@ -1,0 +1,17 @@
+-- how should I model all types of pets? 
+	-- should I use Inheritance?
+
+
+
+
+## Report
+//Ta klasa reprezentuje podsumowanie, które przechowuje informacje o 
+    // stopniu dopasowania zwierzêcia do Aplikanta
+
+    //Na podsatwie jakich pytañ taki raport siê generuje?
+    //Iloœæ dzieci w domu >> niektore psy bêda to znosiæ gorzej (stare), inne lepiej (m³ode)
+    //Iloœæ zwierzat domowych, ich rasy i charaktery >> Bulldog nie lubi siê z Owczarkami za to dogaduje siê z kotami
+    //Wielkoœæ domu >> jeœli mieszkanie jest zbyt ma³e to pies mo¿e siê mêczyæ
+    //Ogród >> du¿y plus dla psa
+    //Gdzie zwierze ma byæ trzymane? W œrodku czy na zewnatrz?
+    // i inne
