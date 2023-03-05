@@ -1,5 +1,5 @@
 ﻿using Adoption.Application.Offerts.DTO;
-using Adoption.Application.Queries;
+using Adoption.Application.Offerts.Queries;
 using Adoption.Infrastructure.DTO;
 using Adoption.Infrastructure.EF.Contexts.Read;
 using Adoption.Infrastructure.EF.Queries.Handlers;

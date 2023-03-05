@@ -1,6 +1,6 @@
-﻿using Adoption.Domain.Offert.Aggregatates;
-using Adoption.Domain.Offert.Repositiories;
-using Adoption.Domain.Offert.ValueObjects;
+﻿using Adoption.Domain.Offerts.Aggregates;
+using Adoption.Domain.Offerts.Repositiories;
+using Adoption.Domain.Offerts.ValueObjects;
 using Adoption.Infrastructure.EF.Contexts.Write;
 using Microsoft.EntityFrameworkCore;
 

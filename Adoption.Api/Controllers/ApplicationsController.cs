@@ -1,14 +1,11 @@
-
 using Adoption.Application.Offerts.DTO;
-using Adoption.Auth.Authentication;
 using Adoption.Infrastructure.EF.Options;
 using Microsoft.AspNetCore.Mvc;
-using OneOf;
 
 namespace Adoption.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     public class OffertsController : ControllerBase
     {
         
@@ -23,19 +20,19 @@ namespace Adoption.Api.Controllers
             _sqlServerOptions = sqlServerOptions;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get(Guid offertId)
-        {
-            throw new NotImplementedException();
+        //[HttpGet("{id:guid}")]
+        //public async Task<IActionResult> Get([FromRoute] GetApplications query)
+        //{
+        //    throw new NotImplementedException();
 
-        }
+        //}
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            throw new NotImplementedException();
+        //[HttpGet]
+        //public async Task<IActionResult> Get()
+        //{
+        //    throw new NotImplementedException();
 
-        }
+        //}
         [HttpPost]
         public async Task<IActionResult> Add(AddOffertDto addApplication)
         {

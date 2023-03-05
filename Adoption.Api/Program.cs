@@ -1,5 +1,5 @@
 using Adoption.Api.Filters;
-using Adoption.Application.DI;
+using Adoption.Application;
 using Adoption.Infrastructure.DI;
 using Adoption.Shared.DI;
 

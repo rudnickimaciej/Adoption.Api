@@ -1,18 +1,20 @@
+using Adoption.Application.Pets.Commands;
 using Adoption.Application.Pets.DTO;
 using Adoption.Infrastructure.EF.Options;
+using Adoption.Shared.Abstractions.Command;
 using Microsoft.AspNetCore.Mvc;
 using OneOf;
 
 namespace Adoption.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     public class PetsController : ControllerBase
     {
-        
         private readonly ILogger<AuthController> _logger;
         private readonly SqlServerOptions _sqlServerOptions;
 
+        private readonly ICommandDispatcher _commandDispatcher;
         public PetsController(
             ILogger<AuthController> logger, 
             SqlServerOptions sqlServerOptions)
@@ -33,11 +35,10 @@ namespace Adoption.Api.Controllers
 
         }
         [HttpPost]
-        public async Task<IActionResult> Add(AddPetDto addPet)
+        public async Task<IActionResult> AddPetAsync(CreatePet command)
         {
-
-            throw new NotImplementedException();
-
+          await _commandDispatcher.DispatchAsync<CreatePet>(command);
+          return Ok();
         }
 
         [HttpPatch]

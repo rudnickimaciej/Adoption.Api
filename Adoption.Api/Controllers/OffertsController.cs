@@ -8,7 +8,6 @@ namespace Adoption.Api.Controllers
     [Route("api/[controller]/[action]")]
     public class ApplicationsController : ControllerBase
     {
-        
         private readonly ILogger<AuthController> _logger;
         private readonly SqlServerOptions _sqlServerOptions;
 
@@ -25,8 +24,8 @@ namespace Adoption.Api.Controllers
             throw new NotImplementedException();
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        [HttpGet("id:guid")]
+        public async Task<IActionResult> Get(GetPet query)
         {
             throw new NotImplementedException();
 

@@ -1,4 +1,4 @@
-﻿using Adoption.Domain.Offert.Aggregatates;
+﻿using Adoption.Domain.Offerts.Aggregates;
 using Adoption.Infrastructure.EF.Configuration.WriteConfigurations;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,7 +7,7 @@ namespace Adoption.Infrastructure.EF.Contexts.Write
     internal class WriteDbContext : DbContext
     {
         public DbSet<Offert> Offerts { get; set; }
-        public DbSet<Domain.Application.Entities.Application> Applications { get; set; }
+        public DbSet<Domain.Applications.Entities.Application> Applications { get; set; }
 
         public WriteDbContext(DbContextOptions<WriteDbContext> options) : base(options)
         {
