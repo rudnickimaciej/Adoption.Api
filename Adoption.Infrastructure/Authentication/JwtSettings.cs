@@ -9,7 +9,6 @@ namespace Adoption.Infrastructure.Authentication
     public class JwtSettings
     {
         public const string Name = "JwtSettings";
-
         public string Secret { get; init; }
         public int ExpiryMinutes{ get; init; }
         public string Issuer { get; init; }

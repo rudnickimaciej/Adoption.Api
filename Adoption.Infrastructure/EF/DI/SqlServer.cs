@@ -1,4 +1,5 @@
-﻿using Adoption.Domain.Offerts.Repositiories;
+﻿using Adoption.Auth.EF.Contexts;
+using Adoption.Domain.Offerts.Repositiories;
 using Adoption.Infrastructure.EF.Contexts.Read;
 using Adoption.Infrastructure.EF.Contexts.Write;
 using Adoption.Infrastructure.EF.Options;
@@ -21,6 +22,10 @@ namespace Adoption.Infrastructure.EF.DI
 
             services.AddDbContext<WriteDbContext>(
               ctx => ctx.UseSqlServer(options.ConnectionString));
+
+            services.AddDbContext<UserDbContext>(
+             ctx => ctx.UseSqlServer(options.ConnectionString));
+
 
             services.AddScoped<IOffertRepository, OffertRepository>();
 
