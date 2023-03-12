@@ -1,4 +1,5 @@
 using Adoption.Application.Common.Services.Authentication;
+using Adoption.Auth.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Adoption.Api.Controllers

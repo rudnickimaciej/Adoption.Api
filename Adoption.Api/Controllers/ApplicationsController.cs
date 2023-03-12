@@ -1,18 +1,18 @@
-using Adoption.Application.Offerts.DTO;
-using Adoption.Infrastructure.EF.Options;
+using Adoption.Application.Offerts.Commands.AddOffert;
+using Adoption.Infrastructure.Database;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Adoption.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class OffertsController : ControllerBase
+    public class ApplicationsController : ControllerBase
     {
         
         private readonly ILogger<AuthController> _logger;
         private readonly SqlServerOptions _sqlServerOptions;
 
-        public OffertsController(
+        public ApplicationsController(
             ILogger<AuthController> logger, 
             SqlServerOptions sqlServerOptions)
         {
@@ -41,12 +41,12 @@ namespace Adoption.Api.Controllers
 
         }
 
-        [HttpPatch]
-        public async Task<IActionResult> Update(UpdateOffertDto updateApplication)
-        {
-            throw new NotImplementedException();
+        //[HttpPatch]
+        //public async Task<IActionResult> Update(UpdateOffertDto updateApplication)
+        //{
+        //    throw new NotImplementedException();
 
-        }
+        //}
 
 
 

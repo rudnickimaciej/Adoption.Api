@@ -1,4 +1,5 @@
-﻿using Adoption.Infrastructure.Authentication;
+﻿using Adoption.Auth;
+using Adoption.Infrastructure.Authentication;
 using Adoption.Shared.Time;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

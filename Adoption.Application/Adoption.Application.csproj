@@ -7,24 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Users\DTO\**" />
+    <EmbeddedResource Remove="Users\DTO\**" />
+    <None Remove="Users\DTO\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="OneOf" Version="3.0.223" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Adoption.Auth\Adoption.Auth.csproj" />
     <ProjectReference Include="..\Adoption.Domain\Adoption.Domain.csproj" />
     <ProjectReference Include="..\Adoption.Shared\Adoption.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Applications\Commands\" />
     <Folder Include="Applications\Events\" />
     <Folder Include="Applications\Exceptions\" />
-    <Folder Include="Applications\Queries\" />
     <Folder Include="Pets\Exceptions\" />
     <Folder Include="Pets\Events\" />
-    <Folder Include="Pets\Queries\" />
-    <Folder Include="Users\Commands\" />
-    <Folder Include="Users\DTO\" />
     <Folder Include="Users\Events\" />
     <Folder Include="Users\Exceptions\" />
     <Folder Include="Users\Queries\" />

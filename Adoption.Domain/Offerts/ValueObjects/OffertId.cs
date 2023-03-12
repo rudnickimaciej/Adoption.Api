@@ -1,5 +1,5 @@
 ﻿using Adoption.Domain.Common;
-using Adoption.Domain.Exceptions;
+using Adoption.Domain.Common.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

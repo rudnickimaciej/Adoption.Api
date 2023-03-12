@@ -7,6 +7,7 @@ namespace Adoption.Auth.EF.Contexts
     {
         public UserDbContext(DbContextOptions<UserDbContext> options) : base(options)
         {
+
         }
     }
 }

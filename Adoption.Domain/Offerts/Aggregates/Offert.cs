@@ -4,9 +4,11 @@ using Adoption.Domain.Offerts.Events;
 using Adoption.Domain.Offerts.ValueObjects;
 using Adoption.Domain.Pets.ValueObjects;
 using Adoption.Shared.Abstractions.Domain;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Adoption.Domain.Offerts.Aggregates
 {
+    [Table("Oferty")]
     public class Offert : AggregateRoot<OffertId>
     {
         public PetId PetId { get; private set; }
@@ -15,10 +17,11 @@ namespace Adoption.Domain.Offerts.Aggregates
 
         public OffertDescription Description { get; private set; }
         public DateTime CreatedOn { get; private set; }
-        public string NowePoleNowaNazwa { get; private set; }
+        public int Papapap { get;private  set; }
+        //public Application Application { get; private set; } //1-1 
 
-        public IEnumerable<Application> Applications { get; private set; }
-
+        public IEnumerable<Application> Applications { get; private set; } //1-N
+        
         //public Application? WonApplication{ get; private set; }
 
         private readonly ICollection<Application> _applications = new List<Application>();
@@ -27,6 +30,7 @@ namespace Adoption.Domain.Offerts.Aggregates
         {
             PetId = petId;
             Description = description;
+            Id = new OffertId(Guid.NewGuid());
         }
         public Offert(PetId pet, OffertStatus offertStatus, ICollection<Application> applications)
         {

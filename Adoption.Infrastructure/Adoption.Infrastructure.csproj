@@ -20,10 +20,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Adoption.Application\Adoption.Application.csproj" />
+    <ProjectReference Include="..\Adoption.Auth\Adoption.Auth.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EF\Migrations\" />
+    <Folder Include="Database\EF\Migrations\" />
+    <Folder Include="Domain\Offerts\Queries\" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using Adoption.Domain.Pets.Entities;
 
-namespace Adoption.Domain.Users.Repositiories
+namespace Adoption.Domain.Pets.Repositiories
 {
     public interface IPetRepository
     {

@@ -1,5 +1,6 @@
 ﻿
 using Adoption.Domain.Offerts.Aggregates;
+using Adoption.Domain.Offerts.ValueObjects;
 
 namespace Adoption.Domain.Applications.Entities
 {
@@ -27,12 +28,12 @@ namespace Adoption.Domain.Applications.Entities
     public class Application
     {
         public Guid Id { get; private set; }
-        public Offert Offert { get; private set; }
         //public Contact Contact { get; private set; } //ValueObject
         public string ApplicantName { get; private set; }
         public string ApplicantLastName { get; private set; }
         //public ApplicationStatus Status{ get; private set; }
         public ApplicationStatus Status { get; private set; }
+        public OffertId OffertId { get; private set; }
     }
 
     public enum ApplicationStatus

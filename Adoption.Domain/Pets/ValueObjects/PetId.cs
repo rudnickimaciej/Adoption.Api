@@ -1,4 +1,4 @@
-﻿using Adoption.Domain.Exceptions;
+﻿using Adoption.Domain.Common.Exceptions;
 namespace Adoption.Domain.Pets.ValueObjects
 {
     public sealed record PetId
